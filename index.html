@@ -3,21 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>J-World</title>
-    <link href="styles.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
-
-        /* Esconde o botão por padrão */
-        .download-button {
-            display: none;
-        }
-
-        /* Exibe o botão em telas maiores que 768px */
-        @media (min-width: 768px) {
-            .download-button {
-                display: block; /* Mostra o botão em telas grandes */
-            }
-        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -34,21 +22,8 @@
     </div>
     
     <p class="description">Ajude Jesse a fugir do segurança do SeaWorld para poder ter mais uma chance de voltar e conhecer melhor aquela orca...</p>
-    <a href="https://github.com/lucasthech/J-World/raw/refs/heads/main/J-World.zip" class="download-button" id="download-button">Baixar</a>
+    <a href="https://github.com/lucasthech/J-World/raw/refs/heads/main/J-World.zip" class="download-button">Baixar</a>
     <p class="description2">(Apenas para Windows)</p>
-    <script>
-        // Função para verificar a largura da tela (opcional, mas útil se houver necessidade de mais lógica)
-        function checkScreenSize() {
-            const downloadButton = document.getElementById('download-button');
-            if (window.innerWidth >= 768) {
-                downloadButton.style.display = 'block'; // Mostra o botão
-            } else {
-                downloadButton.style.display = 'none'; // Esconde o botão
-            }
-        }
-
-        window.onload = checkScreenSize; // Chama a função ao carregar a página
-        window.onresize = checkScreenSize; // Chama a função ao redimensionar a janela
-    </script>
+    <script  src="./index.js"></script>
 </body>
 </html>
