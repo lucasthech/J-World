@@ -8,5 +8,3 @@
         img.style.display = 'block';
         document.getElementsByClassName('description2')[0].style.fontSize = '18px';
      }
-
-   
