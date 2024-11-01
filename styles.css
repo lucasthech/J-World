@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Willy';
+    src: url('fonte-willy.ttf');
+}
+
 body {
     background-color: #202020;
     display: flex;
@@ -24,7 +29,7 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: bottom; /* Mostra a parte de baixo da imagem em telas grandes */
+    object-position: bottom;
 }
 
 .image-container {
@@ -43,30 +48,6 @@ body {
     height: 260px;
 }
 
-/* Oculta as imagens laterais em telas menores */
-@media (max-width: 768px) {
-    .left-image, .right-image {
-        display: none;
-    }
-    
-    /* Ajustes específicos para celulares */
-    .background-image {
-        height: auto; /* Ajusta para que a imagem ocupe o tamanho certo no celular */
-        width: 100vw;
-        top: 0;
-        bottom: unset;
-    }
-}
-
-@media (min-width: 769px) {
-    /* Ajustes específicos para desktops */
-    .background-image {
-        max-width: 600px;
-        height: 100vh;
-        width: 100vw;
-    }
-}
-
 .description {
     position: absolute;
     bottom: 85px;
@@ -77,6 +58,7 @@ body {
     padding: 0 10px;
     text-shadow: 2px 2px 4px #000000;
 }
+
 .description2 {
     position: absolute;
     bottom: -17px;
@@ -88,20 +70,13 @@ body {
     text-shadow: 2px 2px 4px #000000;
 }
 
-@font-face {
-    font-family: 'Willy';
-    src: url('fonte-willy.ttf');
-}
-
-/* Botão de Download */
 .download-button {
     position: absolute;
-    bottom: 25px; /* Abaixo do texto de descrição */
+    bottom: 25px;
     text-align: center;
     font-family: 'Willy';
     padding: 10px 20px;
     font-size: 50px;
-    /*font-weight: bold;*/
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 8px;
@@ -114,4 +89,26 @@ body {
 .download-button:hover {
     transform: translateY(-2px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .image-container,
+    .download-button {
+        display: none;
+    }
+
+    .background-image {
+        height: auto;
+        width: 100vw;
+        top: 0;
+        bottom: unset;
+    }
+}
+
+@media (min-width: 769px) {
+    .background-image {
+        max-width: 600px;
+        height: 100vh;
+        width: 100vw;
+    }
 }
