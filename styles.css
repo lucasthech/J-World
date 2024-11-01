@@ -17,7 +17,7 @@ body {
 }
 
 .background-image {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -27,15 +27,15 @@ body {
 
 .landscape {
     height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: bottom;
+    width: auto;
+    object-fit: contain;
+    object-position: top;
 }
 
 .image-container {
     position: absolute;
     top: 50%;
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
@@ -72,7 +72,7 @@ body {
 
 .download-button {
     position: absolute;
-    bottom: 25px;
+    bottom: 15px;
     text-align: center;
     font-family: 'Willy';
     padding: 10px 20px;
